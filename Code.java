@@ -1,6 +1,12 @@
 import java.util.Scanner;
 import java.time.LocalDateTime;
-public class atividadefametro {
+public class Code {
+	public static void validardia(Scanner input, int dia) {
+	    while (dia < 0) {
+	        System.out.println("Invalido, tente novamente");
+	        dia = input.nextInt();
+	    }
+	}
 public static void main(String[] args) {
 	Scanner input = new Scanner(System.in);
 	LocalDateTime now = LocalDateTime.now();
@@ -21,6 +27,8 @@ public static void main(String[] args) {
 	int dia = 0;
 	
 	String nomeMes = "";
+	
+	
     switch(mes) {
       case 1:
         nomeMes = "Jan";
@@ -29,14 +37,12 @@ public static void main(String[] args) {
           System.out.print("Digite o dia do agendamento");
           dia = input.nextInt();
 
-          while (dia < dialocal) {
+          while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
   			System.out.println("Este dia já passou, tente novamente");
   			mes = input.nextInt();
   		}
-          while (dia < 0) {
-  			System.out.println("Invalido, tente novamente");
-  			mes = input.nextInt();
-  		}
+          validardia (input, dia);
+          
           if (dia >= 1 && dia <= 31) {
             dia_valido = true;
           } else {
@@ -50,14 +56,11 @@ public static void main(String[] args) {
     	  System.out.print("Digite o dia do agendamento");
     	  dia = input.nextInt();
 
-    	  while (dia < dialocal) {
+    	  while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-    	  while (dia < 0) {
-    			System.out.println("Invalido, tente novamente");
-    			mes = input.nextInt();
-    		}
+    	  validardia (input, dia);
     	   if (dia >= 1 && dia <= 31) {
     	     dia_valido = true;
     	   } else {
@@ -71,14 +74,11 @@ public static void main(String[] args) {
        	  System.out.print("Digite o dia do agendamento");
        	  dia = input.nextInt();
 
-       	while (dia < dialocal) {
+       	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
 			System.out.println("Este dia já passou, tente novamente");
 			mes = input.nextInt();
 		}
-       	while (dia < 0) {
-  			System.out.println("Invalido, tente novamente");
-  			mes = input.nextInt();
-  		}
+       	validardia (input, dia);
        	   if (dia >= 1 && dia <= 31) {
        	     dia_valido = true;
        	   } else {
@@ -92,14 +92,11 @@ public static void main(String[] args) {
           	  System.out.print("Digite o dia do agendamento");
           	  dia = input.nextInt();
 
-          	while (dia < dialocal) {
+          	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-          	while (dia < 0) {
-      			System.out.println("Invalido, tente novamente");
-      			mes = input.nextInt();
-      		}
+          	validardia (input, dia);
           	   if (dia >= 1 && dia <= 31) {
           	     dia_valido = true;
           	   } else {
@@ -113,14 +110,11 @@ public static void main(String[] args) {
           	  System.out.print("Digite o dia do agendamento");
           	  dia = input.nextInt();
 
-          	while (dia < dialocal) {
+          	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-          	while (dia < 0) {
-      			System.out.println("Invalido, tente novamente");
-      			mes = input.nextInt();
-      		}
+          	validardia (input, dia);
           	   if (dia >= 1 && dia <= 31) {
           	     dia_valido = true;
           	   } else {
@@ -133,14 +127,11 @@ public static void main(String[] args) {
           	while (!dia_valido) {
           	  System.out.print("Digite o dia do agendamento");
           	  dia = input.nextInt();
-          	while (dia < dialocal) {
+          	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-          	while (dia < 0) {
-      			System.out.println("Invalido, tente novamente");
-      			mes = input.nextInt();
-      		}
+          	validardia (input, dia);
           	   if (dia >= 1 && dia <= 31) {
           	     dia_valido = true;
           	   } else {
@@ -154,14 +145,11 @@ public static void main(String[] args) {
           	  System.out.print("Digite o dia do agendamento");
           	  dia = input.nextInt();
 
-          	while (dia < dialocal) {
+          	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-          	while (dia < 0) {
-      			System.out.println("Invalido, tente novamente");
-      			mes = input.nextInt();
-      		}
+          	validardia (input, dia);
           	   if (dia >= 1 && dia <= 31) {
           	     dia_valido = true;
           	   } else {
@@ -174,14 +162,11 @@ public static void main(String[] args) {
           	while (!dia_valido) {
           	  System.out.print("Digite o dia do agendamento");
           	  dia = input.nextInt();
-          	while (dia < dialocal) {
+          	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-          	while (dia < 0) {
-      			System.out.println("Invalido, tente novamente");
-      			mes = input.nextInt();
-      		}
+          	validardia (input, dia);
           	   if (dia >= 1 && dia <= 31) {
           	     dia_valido = true;
           	   } else {
@@ -194,14 +179,11 @@ public static void main(String[] args) {
           	while (!dia_valido) {
           	  System.out.print("Digite o dia do agendamento");
           	  dia = input.nextInt();
-          	while (dia < dialocal) {
+          	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-          	while (dia < 0) {
-      			System.out.println("Invalido, tente novamente");
-      			mes = input.nextInt();
-      		}
+          	validardia (input, dia);
           	   if (dia >= 1 && dia <= 31) {
           	     dia_valido = true;
           	   } else {
@@ -215,14 +197,11 @@ public static void main(String[] args) {
           	  System.out.print("Digite o dia do agendamento");
           	  dia = input.nextInt();
 
-          	while (dia < dialocal) {
+          	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-          	while (dia < 0) {
-      			System.out.println("Invalido, tente novamente");
-      			mes = input.nextInt();
-      		}
+          	validardia (input, dia);
           	   if (dia >= 1 && dia <= 31) {
           	     dia_valido = true;
           	   } else {
@@ -236,14 +215,11 @@ public static void main(String[] args) {
           	  System.out.print("Digite o dia do agendamento");
           	  dia = input.nextInt();
 
-          	while (dia < dialocal) {
+          	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-          	while (dia < 0) {
-      			System.out.println("Invalido, tente novamente");
-      			mes = input.nextInt();
-      		}
+          	validardia (input, dia);
           	   if (dia >= 1 && dia <= 31) {
           	     dia_valido = true;
           	   } else {
@@ -257,14 +233,11 @@ public static void main(String[] args) {
           	  System.out.print("Digite o dia do agendamento");
           	  dia = input.nextInt();
 
-          	while (dia < dialocal) {
+          	while (mes < meslocal || (mes == meslocal && dia < dialocal)) {
     			System.out.println("Este dia já passou, tente novamente");
     			mes = input.nextInt();
     		}
-          	while (dia < 0) {
-      			System.out.println("Invalido, tente novamente");
-      			mes = input.nextInt();
-      		}
+          	validardia (input, dia);
           	   if (dia >= 1 && dia <= 31) {
           	     dia_valido = true;
           	   } else {
@@ -290,12 +263,22 @@ public static void main(String[] args) {
 	while (min < 0 || min > 59) {
 		System.out.println("Minuto invalido, digite novamente");
 		min = input.nextInt();
-	}
+  }
 	
 	int resuMes = meslocal - mes;
 	int resuDia = dialocal - dia;
 	int resuHora = horalocal - hr;
 	int resuMin = minutolocal - min;
+	
+	if (resuMes < 1) {
+		resuMes = resuMes * -1;
+  } if (resuDia < 1) {
+		resuDia = resuDia * -1;
+  } if (resuHora < 1) {
+		resuHora = resuHora * -1;
+  } if (resuMin < 1) {
+		resuMin = resuMin * -1;
+  }
 	
 	if (resuMes < 10 || resuDia < 10 || resuHora < 10 || resuMin < 10) {
 	    System.out.println("Faltam 0" + resuMes + " meses " + " 0" + resuDia + " dias " + " 0" + resuHora + " horas " + " 0" + resuMin + " minutos");
